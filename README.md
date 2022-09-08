@@ -50,7 +50,7 @@ Create Account Page!
 
 ```
 * Another issue we encountered with deleting Haunt Lists was the difficulty of deleting a cookie server side. The typical method of setting its expiration date to some time in the past was not working for us. Instead, we had to use the alternative method of setting the cookie’s original max age to -1.
-```
+```javascript
 const logoutUser = (req, res) => {
   delete req.session.auth;
   req.session.cookie.originalMaxAge = -1;
